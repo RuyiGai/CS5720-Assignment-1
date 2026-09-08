@@ -2,82 +2,210 @@
 
 ## Student Information
 
-- **Name:** Ruyi Gai
-- **Student ID:** 700778329
-- **Course:** CS5720 Neural Network and Deep Learning
-- **Semester:** Fall 2026
-- **University:** University of Central Missouri
+* **Name:** Ruyi Gai
+* **Student ID:** 700778329
+* **Course:** CS5720 Neural Network and Deep Learning
+* **Semester:** Fall 2026
+* **University:** University of Central Missouri
 
 ## Assignment Overview
 
-This assignment covers fundamental neural network concepts and practical TensorFlow programming. It includes both short-answer questions and programming tasks.
+This assignment covers fundamental concepts of neural networks and their practical implementation using TensorFlow. It consists of two main parts: short-answer questions and programming tasks.
+
+The assignment covers neural network fundamentals, tensor manipulation, loss functions, optimizer comparison, MNIST classification, and TensorBoard visualization.
 
 ## Part I: Short Answer Questions
 
-The short-answer section covers fundamental concepts of neural networks, including:
+The short-answer section covers the following fundamental neural network concepts:
 
-- Traditional Programming vs. Machine Learning
-- Artificial Intelligence, Machine Learning, and Deep Learning
-- Advantages of Deep Learning
-- Neural Network Layers
-- Weights and Biases
-- Activation Functions
-- Perceptron
-- AND, OR, and XOR Problems
-- Sigmoid, Tanh, and ReLU
-- Vanishing Gradient Problem
-- Neural Network Training Cycle
+* Traditional Programming vs. Machine Learning
+* Artificial Intelligence, Machine Learning, and Deep Learning
+* Advantages of Deep Learning
+* Neural Network Layers
+* Weights and Biases
+* Activation Functions
+* Perceptron
+* AND, OR, and XOR Problems
+* Sigmoid, Tanh, and ReLU
+* Vanishing Gradient Problem
+* Neural Network Training Cycle
 
-These questions provide a foundation for understanding how neural networks work and how they are trained.
+These questions provide a foundation for understanding how neural networks work, how neurons make predictions, and how neural networks are trained through forward propagation, loss calculation, backpropagation, and weight updates.
 
 ## Part II: Programming Tasks
 
-### 1. Tensor Manipulation & Reshaping
+### 1. Tensor Manipulations & Reshaping
 
-A random tensor was created to practice tensor rank, shape, reshaping, transposing, and broadcasting operations using TensorFlow.
+A random TensorFlow tensor with shape `(4, 6)` was created, and its rank and shape were examined.
+
+The tensor was then:
+
+* Reshaped from `(4, 6)` to `(2, 3, 4)`
+* Transposed from `(2, 3, 4)` to `(3, 2, 4)`
+* Combined with a smaller tensor of shape `(1, 4)` using broadcasting
+
+This experiment demonstrates how TensorFlow handles tensor rank, shape, reshaping, transposing, and broadcasting operations.
 
 ### 2. Loss Functions
 
-Mean Squared Error (MSE) and Categorical Cross-Entropy (CCE) were calculated using different predictions. The loss values were compared to demonstrate how prediction quality affects model loss.
+Mean Squared Error (MSE) and Categorical Cross-Entropy (CCE) were implemented and compared using different predictions.
 
-### 3. Adam vs. SGD Optimizers
+The true label was:
 
-Two neural network models were trained on the MNIST dataset using the Adam and SGD optimizers. Training and validation accuracy were compared to observe the effect of different optimizers on the training process.
+```text
+[1, 0, 0]
+```
 
-### 4. TensorBoard Experiment
+Two predictions were tested:
 
-A neural network was trained on the MNIST dataset and TensorBoard was used to monitor training and validation accuracy and loss.
+```text
+Original:  [0.7, 0.2, 0.1]
+Modified:  [0.8, 0.1, 0.1]
+```
 
-The model was trained for **5 epochs** and **10 epochs** to compare the effect of increasing the number of training epochs.
+When the prediction became closer to the true label, both loss values decreased:
 
-For the 10-epoch experiment, the model achieved approximately:
+* **MSE:** approximately `0.0467 → 0.0200`
+* **Categorical Cross-Entropy:** approximately `0.3567 → 0.2231`
 
-- **Training Accuracy:** 99.10%
-- **Validation Accuracy:** 97.78%
-- **Training Loss:** 0.0331
-- **Validation Loss:** 0.0742
+A bar chart was also created using Matplotlib to compare the loss values.
 
-The validation loss reached its lowest value around epoch 9 and increased slightly at epoch 10. This may indicate the beginning of overfitting.
+This experiment demonstrates that a lower loss generally indicates that the model prediction is closer to the target values.
+
+### 3. Train a Model with Different Optimizers
+
+The MNIST handwritten digit dataset was used to compare two optimization algorithms:
+
+* **Adam**
+* **SGD**
+
+Both models used the same neural network architecture:
+
+```text
+Flatten (28 × 28)
+        ↓
+Dense (128, ReLU)
+        ↓
+Dense (10, Softmax)
+```
+
+The models were trained using the same:
+
+* MNIST dataset
+* Network architecture
+* Learning rate
+* Batch size
+* Number of epochs
+* Validation split
+
+The main difference was the optimizer.
+
+Training and validation accuracy were plotted to compare the learning behavior of Adam and SGD.
+
+The experiment showed that **Adam generally reached high accuracy faster**, while **SGD improved more gradually**.
+
+### 4. Train a Neural Network and Log to TensorBoard
+
+A neural network was trained on the MNIST dataset using the Adam optimizer, and TensorBoard was used to record and visualize the training process.
+
+The model used the following architecture:
+
+```text
+Input (28 × 28)
+      ↓
+Flatten
+      ↓
+Dense (128, ReLU)
+      ↓
+Dense (10, Softmax)
+```
+
+TensorBoard was used to monitor:
+
+* Training accuracy
+* Validation accuracy
+* Training loss
+* Validation loss
+
+The TensorBoard log files are stored in the `logs/fit/` directory.
+
+#### 4.1 Five-Epoch Experiment
+
+The first experiment trained the model for **5 epochs**.
+
+The training accuracy increased from approximately **89.42%** in the first epoch to **97.67%** in the fifth epoch.
+
+The validation accuracy increased from approximately **95.53%** to **97.75%**.
+
+Both training and validation accuracy improved, while the training and validation loss decreased. There was **no clear evidence of overfitting after five epochs**.
+
+#### 4.2 Ten-Epoch Experiment
+
+A second experiment was performed by increasing the number of epochs from **5 to 10**.
+
+In this experiment:
+
+* **Training Accuracy:** `89.70% → 99.10%`
+* **Training Loss:** `0.3753 → 0.0331`
+* **Validation Accuracy:** reached `97.78%`
+* **Validation Loss:** `0.1731 → 0.0742`
+
+The validation loss reached its lowest value of approximately **0.0732 at epoch 9** and then increased slightly to **0.0742 at epoch 10**.
+
+At the same time, training accuracy continued to improve. This slight divergence between training and validation performance may indicate the **beginning of overfitting**.
+
+Overall, increasing the number of epochs improved the model's training and validation performance in this experiment. However, training for too many epochs may eventually cause overfitting.
 
 ## Files
 
 ```text
+Home Assignment 1.docx
 Assignment 1.ipynb
 README.md
 logs/
 └── fit/
+    ├── <TensorBoard log files>
+    └── ...
 ```
 
-The Jupyter Notebook contains the answers to Part II: Programming Tasks. The code is appropriately commented to explain the main steps.
+### `Home Assignment 1.docx`
 
-The `logs/fit/` folder contains the TensorBoard log files generated during the experiments.
+This document contains:
+
+* Part I: Short-answer questions
+* Screenshots of the results from Part II
+
+### `Assignment 1.ipynb`
+
+The Jupyter Notebook contains:
+
+* The answers to the Part I short-answer questions
+* The code and results for all Part II programming tasks
+* Comments explaining the main steps of the code
+
+### `logs/`
+
+The `logs/fit/` directory contains the TensorBoard log files generated during the MNIST training experiments.
+
+These log files can be loaded into TensorBoard to visualize training and validation accuracy and loss.
+
+## Technologies Used
+
+* **Python**
+* **TensorFlow / Keras**
+* **Matplotlib**
+* **Jupyter Notebook**
+* **TensorBoard**
+* **MNIST Dataset**
 
 ## Conclusion
 
-This assignment provided both theoretical and practical experience with neural networks and TensorFlow. The short-answer questions covered fundamental neural network concepts, while the programming tasks provided hands-on experience with tensor operations, loss functions, optimizers, MNIST classification, and TensorBoard.
+This assignment provided both theoretical and practical experience with neural networks and TensorFlow.
 
-The experiments also demonstrated that increasing the number of epochs can improve training performance, while excessive training may eventually lead to overfitting.
+The short-answer section covered fundamental concepts such as neural network architecture, weights and biases, activation functions, perceptrons, the vanishing-gradient problem, and the neural network training cycle.
 
+The programming section provided hands-on experience with tensor operations, broadcasting, loss functions, optimizer comparison, MNIST classification, and TensorBoard visualization.
 
+The experiments also demonstrated the impact of optimizer selection and training duration on neural network performance. In particular, increasing the number of epochs improved the model's training accuracy, while the slight increase in validation loss after epoch 9 suggests that continued training could eventually lead to overfitting.
 
 
