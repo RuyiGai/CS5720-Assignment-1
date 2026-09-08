@@ -3,36 +3,51 @@
 ## Student Information
 
 - **Name:** Ruyi Gai
-- **Student ID:** 700778329
 - **Course:** CS5720 Neural Network and Deep Learning
 - **Semester:** Fall 2026
 - **University:** University of Central Missouri
 
 ## Assignment Overview
 
-This assignment focuses on fundamental neural network concepts and TensorFlow programming.
+This assignment covers fundamental neural network concepts and practical TensorFlow programming. It includes both short-answer questions and programming tasks.
 
-The assignment includes:
+## Part I: Short Answer Questions
 
-- Tensor Manipulation & Reshaping
-- Broadcasting
-- Loss Functions (MSE and Categorical Cross-Entropy)
-- Adam vs. SGD Optimizers
-- MNIST Neural Network Training
-- TensorBoard Visualization
-- Overfitting Analysis
+The short-answer section covers fundamental concepts of neural networks, including:
 
-## TensorBoard Experiment
+- Traditional Programming vs. Machine Learning
+- Artificial Intelligence, Machine Learning, and Deep Learning
+- Advantages of Deep Learning
+- Neural Network Layers
+- Weights and Biases
+- Activation Functions
+- Perceptron
+- AND, OR, and XOR Problems
+- Sigmoid, Tanh, and ReLU
+- Vanishing Gradient Problem
+- Neural Network Training Cycle
 
-TensorBoard was used to monitor the training and validation accuracy and loss of the neural network.
+These questions provide a foundation for understanding how neural networks work and how they are trained.
 
-The model was trained for **5 epochs** and **10 epochs** to compare the effect of increasing the number of epochs.
+## Part II: Programming Tasks
 
-The TensorBoard logs are stored in:
+### 1. Tensor Manipulation & Reshaping
 
-```text
-logs/fit/
-```
+A random tensor was created to practice tensor rank, shape, reshaping, transposing, and broadcasting operations using TensorFlow.
+
+### 2. Loss Functions
+
+Mean Squared Error (MSE) and Categorical Cross-Entropy (CCE) were calculated using different predictions. The loss values were compared to demonstrate how prediction quality affects model loss.
+
+### 3. Adam vs. SGD Optimizers
+
+Two neural network models were trained on the MNIST dataset using the Adam and SGD optimizers. Training and validation accuracy were compared to observe the effect of different optimizers on the training process.
+
+### 4. TensorBoard Experiment
+
+A neural network was trained on the MNIST dataset and TensorBoard was used to monitor training and validation accuracy and loss.
+
+The model was trained for **5 epochs** and **10 epochs** to compare the effect of increasing the number of training epochs.
 
 For the 10-epoch experiment, the model achieved approximately:
 
@@ -52,15 +67,15 @@ logs/
 └── fit/
 ```
 
-The Jupyter Notebook contains the source code and experiments. The code is appropriately commented to explain the main steps.
+The Jupyter Notebook contains the source code, answers, and experiments. The code is appropriately commented to explain the main steps.
+
+The `logs/fit/` folder contains the TensorBoard log files generated during the experiments.
 
 ## Conclusion
 
-This assignment provided practical experience with TensorFlow, neural network training, loss functions, different optimizers, and TensorBoard. The experiments demonstrated how increasing the number of epochs can improve training performance, while excessive training may eventually lead to overfitting.
+This assignment provided both theoretical and practical experience with neural networks and TensorFlow. The short-answer questions covered fundamental neural network concepts, while the programming tasks provided hands-on experience with tensor operations, loss functions, optimizers, MNIST classification, and TensorBoard.
 
-
-
-
+The experiments also demonstrated that increasing the number of epochs can improve training performance, while excessive training may eventually lead to overfitting.
 
 
 
