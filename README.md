@@ -3,6 +3,7 @@
 ## Student Information
 
 - **Name:** Ruyi Gai
+- **Student ID:** 700778329
 - **Course:** CS5720 Neural Network and Deep Learning
 - **Semester:** Fall 2026
 - **University:** University of Central Missouri
