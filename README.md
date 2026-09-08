@@ -164,8 +164,8 @@ Assignment 1.ipynb
 README.md
 logs/
 └── fit/
-    ├── <TensorBoard log files>
-    └── ...
+    ├── 20260908-001722 (Five-Epoch Experiment)
+    └── 20260908-001837 (Ten-Epoch Experiment)
 ```
 
 ### `Home Assignment 1.docx`
