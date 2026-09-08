@@ -10,14 +10,6 @@
 
 ---
 
-## Assignment Overview
-
-This assignment covers fundamental concepts of neural networks and their practical implementation using TensorFlow. It consists of two main parts: short-answer questions and programming tasks.
-
-The assignment covers neural network fundamentals, tensor manipulation, loss functions, optimizer comparison, MNIST classification, and TensorBoard visualization.
-
----
-
 ## Files
 
 ```text
@@ -49,6 +41,14 @@ The Jupyter Notebook contains:
 The `logs/fit/` directory contains the TensorBoard log files generated during the MNIST training experiments.
 
 These log files can be loaded into TensorBoard to visualize training and validation accuracy and loss.
+
+---
+
+## Assignment Overview
+
+This assignment covers fundamental concepts of neural networks and their practical implementation using TensorFlow. It consists of two main parts: short-answer questions and programming tasks.
+
+The assignment covers neural network fundamentals, tensor manipulation, loss functions, optimizer comparison, MNIST classification, and TensorBoard visualization.
 
 ---
 
@@ -206,6 +206,8 @@ Overall, increasing the number of epochs improved the model's training and valid
 * **Jupyter Notebook**
 * **TensorBoard**
 * **MNIST Dataset**
+
+---
 
 ## Conclusion
 
