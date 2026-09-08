@@ -179,7 +179,6 @@ This document contains:
 
 The Jupyter Notebook contains:
 
-* The answers to the Part I short-answer questions
 * The code and results for all Part II programming tasks
 * Comments explaining the main steps of the code
 
