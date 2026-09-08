@@ -68,7 +68,7 @@ logs/
 └── fit/
 ```
 
-The Jupyter Notebook contains the source code, answers, and experiments. The code is appropriately commented to explain the main steps.
+The Jupyter Notebook contains the answers to Part II: Programming Tasks. The code is appropriately commented to explain the main steps.
 
 The `logs/fit/` folder contains the TensorBoard log files generated during the experiments.
 
