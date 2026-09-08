@@ -8,11 +8,49 @@
 * **Semester:** Fall 2026
 * **University:** University of Central Missouri
 
+---
+
 ## Assignment Overview
 
 This assignment covers fundamental concepts of neural networks and their practical implementation using TensorFlow. It consists of two main parts: short-answer questions and programming tasks.
 
 The assignment covers neural network fundamentals, tensor manipulation, loss functions, optimizer comparison, MNIST classification, and TensorBoard visualization.
+
+---
+
+## Files
+
+```text
+Home Assignment 1.docx
+Assignment 1.ipynb
+README.md
+logs/
+└── fit/
+    ├── 20260908-001722 (Five-Epoch Experiment)
+    └── 20260908-001837 (Ten-Epoch Experiment)
+```
+
+### `Home Assignment 1.docx`
+
+This document contains:
+
+* Part I: Short-answer questions
+* Screenshots of the results from Part II
+
+### `Assignment 1.ipynb`
+
+The Jupyter Notebook contains:
+
+* The code and results for all Part II programming tasks
+* Comments explaining the main steps of the code
+
+### `logs/`
+
+The `logs/fit/` directory contains the TensorBoard log files generated during the MNIST training experiments.
+
+These log files can be loaded into TensorBoard to visualize training and validation accuracy and loss.
+
+---
 
 ## Part I: Short Answer Questions
 
@@ -31,6 +69,8 @@ The short-answer section covers the following fundamental neural network concept
 * Neural Network Training Cycle
 
 These questions provide a foundation for understanding how neural networks work, how neurons make predictions, and how neural networks are trained through forward propagation, loss calculation, backpropagation, and weight updates.
+
+---
 
 ## Part II: Programming Tasks
 
@@ -156,37 +196,7 @@ At the same time, training accuracy continued to improve. This slight divergence
 
 Overall, increasing the number of epochs improved the model's training and validation performance in this experiment. However, training for too many epochs may eventually cause overfitting.
 
-## Files
-
-```text
-Home Assignment 1.docx
-Assignment 1.ipynb
-README.md
-logs/
-└── fit/
-    ├── 20260908-001722 (Five-Epoch Experiment)
-    └── 20260908-001837 (Ten-Epoch Experiment)
-```
-
-### `Home Assignment 1.docx`
-
-This document contains:
-
-* Part I: Short-answer questions
-* Screenshots of the results from Part II
-
-### `Assignment 1.ipynb`
-
-The Jupyter Notebook contains:
-
-* The code and results for all Part II programming tasks
-* Comments explaining the main steps of the code
-
-### `logs/`
-
-The `logs/fit/` directory contains the TensorBoard log files generated during the MNIST training experiments.
-
-These log files can be loaded into TensorBoard to visualize training and validation accuracy and loss.
+---
 
 ## Technologies Used
 
