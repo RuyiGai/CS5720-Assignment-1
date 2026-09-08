@@ -29,7 +29,7 @@ The model was trained for **5 epochs** and **10 epochs** to compare the effect o
 
 The TensorBoard logs are stored in:
 
-```text
+### text
 logs/fit/
 The 10-epoch experiment achieved approximately:
 
